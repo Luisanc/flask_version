@@ -14,4 +14,6 @@ firebase_admin.initialize_app(cred, {
     'databaseURL': app.config['FIREBASE_CONFIG']['databaseURL']
 })
 
-from app import routes
+from app.routes.home import index
+from app.routes.products import create_product, update_product, get_all_products, get_product_by_id, delete_product
+from app.routes.authenticate import login
